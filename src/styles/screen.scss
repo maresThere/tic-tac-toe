@@ -1,14 +1,119 @@
 @import 'utility';
-
+@import 'table';
+@import url('https://fonts.googleapis.com/css?family=Delius+Unicase:400,700');
 $base-text-size: 16px;
-$base-font-family: sans-serif;
-
+$base-font-family: 'Delius Unicase', cursive;
+$purple: #61189b;
+$lime: #06ca05;
+$orange: #ff8000;
 html {
   text-size-adjust: 100%;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 30px ridge lighten($purple, 20%);
+  margin: auto;
+  width: 800px;
+  height: 90vh;
+  position: relative;
+  top: 40px;
+  background-color: $lime;
+}
+
+#title {
+  background-color: $purple;
+  color: white;
+  width: 150px;
+  position: absolute;
+  top: 40%;
+  left: 100px;
+  justify-content: center;
+  border: 5px groove white;
+}
+
+h1 {
+  font-size: 3em;
+  margin-left: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: $orange;
+  width: 100%;
+}
+
+h3 {
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+.circle {
+  display: flex;
+  background-color: white;
+  width: 150px;
+  height: 150px;
+  border: 5px double $purple;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50px;
+  left: 125px;
+  align-items: center;
+}
+
+.square {
+  display: flex;
+  background-color: white;
+  width: 125px;
+  height: 125px;
+  // border-radius: 50%;
+  border: 5px double $orange;
+  margin: 0 auto;
+  position: absolute;
+  top: 20px;
+  left: 350px;
+  align-items: center;
+}
+
 body {
   @include font-smoothing(on);
-  margin: 0;
+
+  margin: 10px;
   font: $base-text-size / 1 $base-font-family;
+  background-color: $orange;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body:not(.modal) .overlay {
+  display: none;
+}
+
+body.modal section {
+  filter: blur(5px);
+}
+
+.dialog {
+  height: 200px;
+  width: 200px;
+  background-color: green;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px #333;
 }
