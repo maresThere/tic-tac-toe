@@ -6,6 +6,7 @@ $base-font-family: 'Delius Unicase', cursive;
 $purple: #61189b;
 $lime: #06ca05;
 $orange: #ff8000;
+
 html {
   text-size-adjust: 100%;
 }
@@ -15,7 +16,7 @@ html {
   flex-direction: column;
   border: 30px ridge lighten($purple, 20%);
   margin: auto;
-  width: 800px;
+  width: 725px;
   height: 90vh;
   position: relative;
   top: 40px;
@@ -28,7 +29,7 @@ html {
   width: 150px;
   position: absolute;
   top: 40%;
-  left: 100px;
+  left: 70px;
   justify-content: center;
   border: 5px groove white;
 }
@@ -116,4 +117,63 @@ body.modal section {
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 20px #333;
+}
+
+@media screen and (max-width: 850px) {
+  .wrapper {
+    width: 500px;
+    height: 90vh;
+    top: 40px;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: white;
+    border: 7px outset  #61189b;
+    max-width: 300px;
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+  }
+
+  table td {
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    // padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin-left: 2px;
+    text-align: center;
+  }
+
+  #title {
+    width: 300px;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    justify-content: center;
+  }
+
+  .circle {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    align-items: center;
+  }
+
+  .square {
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: 20px;
+    left: 250px;
+  }
+
+
 }
