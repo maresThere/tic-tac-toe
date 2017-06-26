@@ -1,4 +1,4 @@
-# Tic Tac Toe
+<h1 align="center"> Tic Tac Toe</h1>
 <div align="center">
 <img src="https://github.com/maresThere/tic-tac-toe/blob/master/Kapture.gif" width="400" height="400" />
 </div>
